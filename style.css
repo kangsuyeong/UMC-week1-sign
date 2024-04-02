@@ -68,7 +68,7 @@ main{
 }
 #sign-btn{
     border: none;
-    background-color: black;
+    background-color: lightgray;
     color: white;
     width: 200px;
     height: 30px;

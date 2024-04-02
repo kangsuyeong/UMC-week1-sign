@@ -1,0 +1,24 @@
+/* 모달스타일 */
+.modal-wrap{
+    /* modal-wrap-기본셋팅 */
+    position: fixed;
+    left: 0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    background:rgb(0,0,0,0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .modal{
+    background: white;
+    width: 320px;
+    padding: 24px 16px;
+  
+  }
+
+  .close-btn-area{
+    text-align: right;
+  }

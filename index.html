@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="modalcss.css">
+  </head>
+  <body>
+    <main>
+      <div class="signUp-box">
+        <div class="signUp-area">
+          <div>
+            <h1 class="title">회원가입</h1>
+          </div>
+
+          <div class="signUp-input-area">
+            <div class="">
+              <div>이름</div>
+              <input type="text" id="signup-name"/>
+              <div id="name-area"></div>
+            </div>
+            
+            <div class="">
+              <div>이메일</div>
+              <input type="email" id="signup-email"/>
+              <div id="email-area"></div>
+            </div>
+
+            <div class="">
+              <div>나이</div>
+              <input type="text" id="signup-age"/>
+              <div id="age-area"></div>
+            </div>
+
+            <div class="">
+              <div>비밀번호</div>
+              <input type="password" id="signup-password"/>
+              <div id="password-area"></div>
+            </div>
+        
+            <div class="">
+              <div>비밀번호 확인</div>
+              <input type="password" id="signup-repassword"/>
+              <div id="repassword-area"></div>
+            </div>            
+          </div>
+
+          <div class="sign-btn-area">
+            <button id="sign-btn" onclick="sign()" disabled>가입하기</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div class="modal-wrap">
+      <div class="modal">
+          <h1>가입성공</h1>
+          <p>UMC 챌린저 가입을 축하합니다!!</p>
+          <div class="close-btn-area">
+              <button id="close-btn">닫기</button>
+          </div>
+      </div>
+  </div>
+
+    <script src="main.js"></script>
+    <script src="modal.js"></script>
+  </body>
+</html>

@@ -20,6 +20,16 @@ const emailForm = /^[a-z0-9\.\-_]+@([a-z0-9\-]+\.)+[a-z]{2,6}$/ //이메일 형�
 const ageForm = /^[0-9]+$/ // 숫자만 가능 
 const passwordForm = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{4,12}$/ //최소 4자리 이상 최대 12자리 영어, 숫자, 특수문자 모두조합
 
+
+//input에서 key입력을 받았을 때 inputNull함수 실행
+username.addEventListener("keyup",()=>inputNull());
+useremail.addEventListener("keyup", ()=>inputNull());
+userage.addEventListener("keyup", ()=>inputNull());
+userpassword.addEventListener("keyup", ()=>inputNull());
+userrepassword.addEventListener("keyup", ()=>inputNull());
+
+
+
 // 이름확인 함수
 const userNameCheck = ()=>{
     //반환 값
@@ -149,7 +159,6 @@ const sign = ()=>{
 }
 
 
-
 //아무것도 입력하지 않으면 버튼 활성화 X
 const inputNull = ()=>{
     if(username.value==="" || useremail.value==="" || userage.value==="" || userpassword.value==="" || userrepassword.value===""){
@@ -161,12 +170,3 @@ const inputNull = ()=>{
         signBtn.style.backgroundColor="black"
     }
 }
-
-
-//input에서 key입력을 받았을 때 inputNull함수 실행
-username.addEventListener("keyup",inputNull);
-useremail.addEventListener("keyup", inputNull);
-userage.addEventListener("keyup", inputNull);
-userpassword.addEventListener("keyup", inputNull);
-userrepassword.addEventListener("keyup", inputNull);
-

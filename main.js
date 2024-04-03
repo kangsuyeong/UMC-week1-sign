@@ -79,23 +79,22 @@ const ageCheck = ()=>{
         ageArea.innerText="올바른 나이 형식입니다"
         ageArea.style.color="green";
         isValid = true;
+        return isValid
     }
     //음수일 경우
     else if(parseInt(userage.value)<=0){
         ageArea.innerText="나이는 음수가 될 수 없습니다!"
-        ageArea.style.color="red"
     }
     //실수일 경우
     else if(parseInt(userage.value)%1===0){
         ageArea.innerText="나이는 실수가 될 수 없습니다!"
-        ageArea.style.color="red"
     }
     // 문자열일경우
     else if(typeof userage.value==="string"){
         // console.log("확인",parseInt(userage.value)+1)
         ageArea.innerText="나이는 숫자 형식이어야합니다"
-        ageArea.style.color="red"
     }
+    ageArea.style.color="red"
     return isValid
 }
 
@@ -110,19 +109,18 @@ const passwordCheck = ()=>{
         passwordArea.innerText="올바른 비밀번호입니다!"
         passwordArea.style.color="green";
         isValid = true;
+        return isValid
     }
     else if(userpassword.value.length<4){
         passwordArea.innerText="비밀번호는 최소 4자리 이상이어야 합니다."
-        passwordArea.style.color="red"
     }
     else if(userpassword.value.length>12){
         passwordArea.innerText="비밀번호는 최대 12자리까지 가능합니다."
-        passwordArea.style.color="red"
     }
     else{
         passwordArea.innerText="영어, 숫자, 특수문자를 모두 조합해서 비밀번호를 작성해야 합니다."
-        passwordArea.style.color="red"
     }
+    passwordArea.style.color="red"
     return isValid
 
 }
